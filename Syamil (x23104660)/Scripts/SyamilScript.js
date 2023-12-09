@@ -151,3 +151,11 @@ const initGame = () => {
 updateFoodPosition();
 setIntervalId = setInterval(initGame, 100);
 document.addEventListener("keyup", changeDirection);
+
+
+
+function playVideo() {
+    const syamuVideoContainer= document.getElementById('syamuVideoContainer');
+    syamuVideoContainer.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/6MByi5l7OiM?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    syamuVideoContainer.classList.remove('hidden');
+}
