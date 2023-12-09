@@ -5,15 +5,17 @@
 
 	<head>
 		
-		<title> (=🝦 ༝ 🝦=) もふもふにゃんメイドカフェへようこそ、 あなたは退化します ! ! ! (=🝦 ༝ 🝦=) </title>	
+		<title> 🐍 ヘビゲームをしましょう、バカ ! ! ! 🐍 </title>	
 		
 		<link href="Styles/SyamilStyles.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel='stylesheet'> <!-- Styles for the snake game -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		
 		
 		
 		<meta charset="UTF-8">
-		<meta name="description" content="Secret minigame of tic-tac-toe for Mofu Mofu Nyan maid cafe customers!">
-		<meta name="keywords" content="HTML, CSS, JavaScript, meta tag, tag reference, minigame, tic-tac-toe, maid cafe, kawaii">
+		<meta name="description" content="Minigame of Classic Snake for Mofu Mofu Nyan maid cafe customers!">
+		<meta name="keywords" content="HTML, CSS, JavaScript, meta tag, tag reference, minigame, classic snake game, maid cafe, kawaii">
 		<meta name="author" content="Muhammad Syamil bin Rizaudin (x23104660)">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,25 +34,26 @@
 		
 			<h1 class="headerSyamil"> ~( ˘▾˘~) Let's Play (~‾⌣‾)~ </h1>
 			
-			<h3 class="subheaderSyamil"> Ahhh the good ol' Snake game 🐍 Use the arrow keys to move the snake around &#x2190 &#x2191 &#x2192 &#x2193</h3>
+			<h3 class="subheaderSyamil"> Ahhh the good ol' Snake game 🐍 Use the arrow keys on your keyboard or the ones below to move the snake around &#x2190 &#x2191 &#x2192 &#x2193</h3>
 			
-			
-			<div class="wrapper">
-			
-				<div class="game-details">
-					<span class="score">Score: 0</span>
-					<span class="high-score">High Score: 0</span>
+			<div class="container-sm">
+				<div class="wrapper">
+				
+					<div class="game-details">
+						<span class="score">Score: 0</span>
+						<span class="high-score">High Score: 0</span>
+					</div>
+				
+				<div class="play-board"></div>
+		  
+				<div class="controls">
+						<i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+						<i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+						<i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+						<i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
 				</div>
-			
-			<div class="play-board"></div>
-      
-			<div class="controls">
-					<i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
-					<i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
-					<i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
-					<i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
-			</div>
-			
+				
+				</div>
 			</div>
 	
 	
@@ -58,7 +61,7 @@
 			<video id="syamuVideo"
 			autoplay loop muted
 			poster="Images/videobgposter.webp">
-			<source src="Videos/gamebgvideo.mp4" type="video/mp4"> <!-- Gamulinskii, O. (2021) An Animated Video of Landscape, Pexels.com - An Animated Video of Landscape. Pexels. Available at: https://www.pexels.com/video/an-animated-video-of-landscape-8879031/ (Accessed: 09 December 2023).  -->
+			<source src="Videos/gamebgvideo.mp4" type="video/mp4"> <!-- Gamulinskii, O. (2021) An Animated Video of Landscape Free Stock Video Footage, Royalty-Free 4K &amp; HD Video Clip. Pexels. Available at: https://www.pexels.com/video/an-animated-video-of-landscape-8879031/ (Accessed: 09 December 2023). -->
 			Your browser does not support HTML5 video.
 			</video>
 			
@@ -75,7 +78,6 @@
 		
 		
 		
-		
 	<div class="footer"> 
 	
         <button id="syamuButton" onclick="toggleVideo()">Pause Video</button>
@@ -87,7 +89,7 @@
 	
 	
 	
-	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<script defer src="Scripts/SyamilScript.js"></script>
 	
 	
