@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation</title>
+  <link rel="stylesheet" href="maidof.css">
+</head>
+
+<body>
+  <h1>🩷Reservation(◕ w ◕)🩷</h1><br><br>
+
+  <div class="maid-date-time-picker">
+    <input type="date" class="date-input" id="datePicker">
+    <br>
+    <select class="time-input" id="hourPicker">
+      <option value="10">10:00</option>
+      <option value="11">11:00</option>
+      <option value="12">12:00</option>
+      <option value="13">13:00</option>
+      <option value="14">14:00</option>
+      <option value="15">15:00</option>
+      <option value="16">16:00</option>
+      <option value="17">17:00</option>
+    </select></div>
+    <br>
+
+    <div class="selected-date-time" id="selectedDateTime"></div>
+
+  <div class="maid-card" id="maidCard1">
+    <img class="fun" src="maid1.jpg" alt="Maid named Shamu">
+    <p class="text-below-image">❤️Shamu❤️</p>
+
+    <img class="fun" src="maid2.jpg" alt="Maid named Ricardo">
+    <p class="text-below-image">🩷Ricardo🩷</p>
+
+    <img class="fun" src="maid3.jpg" alt="Maid named Cris">
+    <p class="text-below-image">🧡Cris🧡</p>
+
+    <img class="fun" src="maid4.jpg" alt="Maid named Jackie">
+    <p class="text-below-image">💛Jackie💛</p>
+
+    <img class="fun" src="maid5.jpg" alt="Maid named Binton">
+    <p class="text-below-image">💚Binton💚</p>
+
+    <img class="fun" src="maid6.jpg" alt="Maid named Jean">
+    <p class="text-below-image">💙Jean💙</p>
+
+    <img class="fun" src="maid7.jpg" alt="Maid named Glen">
+    <p class="text-below-image">🩵Glen🩵</p>
+
+    <img class="fun" src="maid8.jpg" alt="Maid named Fan">
+    <p class="text-below-image">🤍Fan🤍</p>
+
+    <img class="fun" src="maid9.jpg" alt="Maid named Denis">
+    <p class="text-below-image">🤎Denis🤎</p>
+
+    <img class="fun" src="maid10.jpg" alt="Maid named Lily">
+    <p class="text-below-image">🩶Lily🩶</p>
+  </div>
+
+  <h3>
+    <button class="reservation-button" onclick="confirmReservation()">🩷Confirm🩷</button>
+  </h3>
+
+
+<script>
+    var selectedMaid = '';
+
+    function selectMaid(maidName) {
+      selectedMaid = maidName;
+
+      // 선택한 메이드에 효과 주기 (예시로 간단한 효과 추가)
+      var maidElements = document.querySelectorAll('.maid');
+      maidElements.forEach(function (element) {
+        element.classList.remove('selected');
+      });
+
+      var selectedMaidElement = document.querySelector(`.maid:contains("${maidName}")`);
+      if (selectedMaidElement) {
+        selectedMaidElement.classList.add('selected');
+      }
+
+      document.getElementById('selectedDateTime').innerText = `Selected Maid: ${maidName}`;
+    }
+
+    function confirmReservation() {
+      var selectedDate = document.getElementById('datePicker').value;
+      var selectedHour = document.getElementById('hourPicker').value;
+
+      if (selectedMaid === '') {
+        alert('Please select a maid before confirming your reservation.');
+        return;
+      }
+
+      var confirmationMessage = `Reservation confirmed!\nDate: ${selectedDate}\nTime: ${selectedHour}\nMaid: ${selectedMaid}`;
+      document.getElementById('selectedDateTime').innerText = confirmationMessage;
+    }
+
+    // jQuery 사용을 위한 스크립트 추가
+    // 코드 내용은 https://stackoverflow.com/a/3730916/12558169에서 가져왔습니다.
+    jQuery.expr[':'].contains = function (a, i, m) {
+      return jQuery(a).text().toUpperCase()
+        .indexOf(m[3].toUpperCase()) >= 0;
+    };
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</body>
+
+</html>
