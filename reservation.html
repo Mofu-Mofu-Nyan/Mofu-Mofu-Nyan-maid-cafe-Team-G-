@@ -78,10 +78,47 @@
       </div>
     </div>
 
-  <h3>
-    <button class="reservation-button" onclick="confirmReservation()">🩷Confirm🩷</button>
-  </h3>
+    <div class="form-container">
+	
+      <form>
+        <label for="fname"><p class="formlabels">*Your Full Name:</p></label>
+        <input type="text" id="fname" name="fname" placeholder="Nice to meetcha! (ﾐዋ ﻌ ዋﾐ)ﾉ" minlength="3" maxlength="20" required><br><br>
+          
+        <label for="phone"><p class="formlabels">*Your Phone Number:</p></label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" title="Ten digit number with proper spacing" placeholder="123 456 7890" minlength="12" maxlength="12" required><br><br>
+          
+        <label for="email"><p class="formlabels">*Please Enter Your Email:</p></label>
+        <input type="email" id="email" name="email" placeholder="johndoe@email.com" required><br><br><br>
+        
+        
+        <p class="formlabels">*How would you like us to contact you?</p><br>
+        <input type="radio" id="phonenumber" name="contact_option" value="Phone Number" required>
+        <label for="phonenumber"><p class="radiobuttonlabels">Phone Number</p></label><br>
+        <input type="radio" id="emailaddress" name="contact_option" value="Email Address" required>
+        <label for="emailaddress"><p class="radiobuttonlabels">Email</p></label><br><br>
 
+        
+        <label for="commentarea"><p class="formlabels">Would you like to leave us any comments?</p></label>
+        <textarea id="commentarea" name="commentarea" rows="4" cols="50" placeholder="Feed me compliments pls (=^･ω･^=)"></textarea>
+        <br><br>
+        
+        
+        
+        <input type="checkbox" id="myCheck" onclick="myFunction()" required>
+        <label for="myCheck"><p class="formlabels"> *I agree to your terms & conditions </p></label>
+        
+        <p id="text" style="display:none"> Your life now belongs to us! (=ↀωↀ=) </p>
+        
+        <br>
+          
+          
+      </form>
+    
+    </div>
+
+  <h3>
+    <button class="reservation-button" onclick="confirmReservation()">🩷Confirm(=◉ᆽ◉=)🩷</button>
+  </h3>
 
   <script>
     var selectedMaid = '';

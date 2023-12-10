@@ -138,6 +138,68 @@
     font-weight: bold;
   } 
 
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 4%;
+    
+  }
+  
+  
+  form {
+    width: 50%;
+    text-align: center;
+  }
+  
+  
+  textarea {
+    font-family: 'Architects Daughter', cursive;
+    resize: none;
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: pink;
+  }
+  
+  
+  input[type=text]:focus {
+    border: 1px solid purple;
+  }
+  
+  input[type=text] {
+     font-family: 'Architects Daughter', cursive;
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: pink;
+  }
+  
+  
+  input[type=tel] {
+     font-family: 'Architects Daughter', cursive;
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: pink;
+  }
+  
+  
+  input[type=email] {
+     font-family: 'Architects Daughter', cursive;
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: pink;
+  }
+
   .reservation-button {
     padding: 20px 40px;
     font-family: 'Architects Daughter', cursive;
