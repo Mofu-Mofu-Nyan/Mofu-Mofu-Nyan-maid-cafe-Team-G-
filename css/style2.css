@@ -3,9 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');             
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap');
 
-*{
-    border: solid 1px;
-}
 
 body{
     background-color: pink;
@@ -271,14 +268,28 @@ footer{
 .home_links span{
     background-color: #2A2F4F;
     color: white;
-    border-radius: 20%;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-width: 180px;
-    min-height: 150px;
+    justify-content: center;
+    min-width: 170px;
+    min-height: 130px;
     margin: 10px;
+    font-size: larger;
+    border: solid 5px white;
+}
+
+.home_links .bi{
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.home_links h4{
+    margin: 0;
+    margin-top: 5px;
+    font-size: x-large;
 }
 
 .home_descrip{
