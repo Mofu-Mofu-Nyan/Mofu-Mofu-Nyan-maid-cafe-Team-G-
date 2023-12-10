@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation</title>
+  <link rel="stylesheet" href="maidof.css">
+</head>
+
+<body class="jackie">
+  <h1 class="jackieh1">🩷Reservation(◕ w ◕)🩷</h1><br><br>
+
+  <div class="maid-date-time-picker">
+    <input type="date" class="date-input" id="datePicker"><br>
+    <select class="time-input" id="hourPicker">
+      <option value="10">10:00</option>
+      <option value="11">11:00</option>
+      <option value="12">12:00</option>
+      <option value="13">13:00</option>
+      <option value="14">14:00</option>
+      <option value="15">15:00</option>
+      <option value="16">16:00</option>
+      <option value="17">17:00</option>
+    </select></div><br>
+
+    <div class="selected-date-time" id="selectedDateTime"></div>
+
+    <div class="maid-card">
+      <div class="maid" onmousedown="selectMaid('❤️Shamu❤️')">
+        <img class="fun" src="maid1.jpg" alt="Maid named Shamu">
+        <p class="text-below-image">❤️Shamu❤️</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('🩷Ricardo🩷')">
+        <img class="fun" src="maid2.jpg" alt="Maid named Ricardo">
+        <p class="text-below-image">🩷Ricardo🩷</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('🧡Cris🧡')">
+        <img class="fun" src="maid3.jpg" alt="Maid named Cris">
+        <p class="text-below-image">🧡Cris🧡</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('💛Jackie💛')">
+        <img class="fun" src="maid4.jpg" alt="Maid named Jackie">
+        <p class="text-below-image">💛Jackie💛</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('💚Binton💚')">
+        <img class="fun" src="maid5.jpg" alt="Maid named Binton">
+        <p class="text-below-image">💚Binton💚</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('💙Jean💙')">
+        <img class="fun" src="maid6.jpg" alt="Maid named Jean">
+        <p class="text-below-image">💙Jean💙</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('🩵Glen🩵')">
+        <img class="fun" src="maid7.jpg" alt="Maid named Glen">
+        <p class="text-below-image">🩵Glen🩵</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('🤍Fan🤍')">
+        <img class="fun" src="maid8.jpg" alt="Maid named Fan">
+        <p class="text-below-image">🤍Fan🤍</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('🤎Denis🤎')">
+        <img class="fun" src="maid9.jpg" alt="Maid named Denis">
+        <p class="text-below-image">🤎Denis🤎</p>
+      </div>
+    
+      <div class="maid" onmousedown="selectMaid('🩶Lily🩶')">
+        <img class="fun" src="maid10.jpg" alt="Maid named Lily">
+        <p class="text-below-image">🩶Lily🩶</p>
+      </div>
+    </div>
+
+    <div class="form-container">
+	
+      <form>
+        <label for="fname"><p class="formlabels">*Your Full Name:</p></label>
+        <input type="text" id="fname" name="fname" placeholder="Nice to meetcha! (ﾐዋ ﻌ ዋﾐ)ﾉ" minlength="3" maxlength="20" required><br><br>
+          
+        <label for="phone"><p class="formlabels">*Your Phone Number:</p></label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" title="Ten digit number with proper spacing" placeholder="123 456 7890" minlength="12" maxlength="12" required><br><br>
+          
+        <label for="email"><p class="formlabels">*Please Enter Your Email:</p></label>
+        <input type="email" id="email" name="email" placeholder="johndoe@email.com" required><br><br><br>
+        
+        
+        <p class="formlabels">*How would you like us to contact you?</p><br>
+        <input type="radio" id="phonenumber" name="contact_option" value="Phone Number" required>
+        <label for="phonenumber"><p class="radiobuttonlabels">Phone Number</p></label><br>
+        <input type="radio" id="emailaddress" name="contact_option" value="Email Address" required>
+        <label for="emailaddress"><p class="radiobuttonlabels">Email</p></label><br><br>
+
+        
+        <label for="commentarea"><p class="formlabels">Would you like to leave us any comments?</p></label>
+        <textarea id="commentarea" name="commentarea" rows="4" cols="50" placeholder="Feed me compliments pls (=^･ω･^=)"></textarea>
+        <br><br>
+        
+        <input type="checkbox" id="myCheck" onclick="myFunction()" required>
+        <label for="myCheck"><p class="formlabels"> *I agree to your terms & conditions </p></label>
+        
+        <p id="text" style="display:none"> Your life now belongs to us! (=ↀωↀ=) </p>
+        
+        <br>
+          
+          
+      </form>
+    
+    </div>
+
+  <h3 class="jackieh3">
+    <button class="reservation-button" onclick="confirmReservation()">🩷Confirm(=◉ᆽ◉=)🩷</button>
+  </h3>
+
+  <script>
+    var selectedMaid = '';
+
+    function selectMaid(maidName) {
+  selectedMaid = maidName;
+
+  var maidElements = document.querySelectorAll('.maid');
+  maidElements.forEach(function (element) {
+    element.classList.remove('selected');
+  });
+
+  var selectedMaidElement = document.querySelector(`.maid[data-maid="${maidName}"]`);
+  if (selectedMaidElement) {
+    selectedMaidElement.classList.add('selected');
+  }
+
+  document.getElementById('selectedDateTime').innerText = `Selected Maid: ${maidName}`;
+}
+
+function confirmReservation() {
+  var selectedDate = document.getElementById('datePicker').value;
+  var selectedHour = document.getElementById('hourPicker').value;
+
+  if (selectedMaid === '') {
+    alert('Please select a maid before confirming your reservation.');
+    return;
+  }
+
+  if (selectedDate === '') {
+    alert('Please select a Date before confirming your reservation.');
+    return;
+  }
+
+  var confirmationMessage = `Reservation confirmed!\nDate: ${selectedDate}\nTime: ${selectedHour}\nMaid: ${selectedMaid}`;
+
+  showConfirmationAlert(confirmationMessage);
+}
+
+document.querySelector('.reservation-button').addEventListener('click', confirmReservation);
+
+function showConfirmationAlert(message) {
+  document.querySelector('.reservation-button').addEventListener('click', function() {
+    if (confirm(message)) {
+      window.location.href = 'PricesAndPackages.html';
+    }
+  });
+}
+
+  </script>
+
+</body>
+
+</html>
