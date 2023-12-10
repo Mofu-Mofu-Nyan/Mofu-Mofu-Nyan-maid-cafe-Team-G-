@@ -10,6 +10,7 @@
 	
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	
 }
 
@@ -53,22 +54,59 @@
 }
 
 
-.subheaderPriceSyamil {
+/* These below are for the attributes of the container for the Prices & Packages page */
+.containerPriceSyamil {
 	font-size: 90%;
 	font-family: 'Hachi Maru Pop', cursive;
 	text-align: center;
 	letter-spacing: 2px;
 	font-style: italic;
 	color: #f775a9;
-	padding: 1%;
-	background: #ffdfe0;
-	width: auto;
+	padding: 2%;
+	background: rgba(255, 223, 224, 0.8);
+	width: 100%;
 	height: auto;
-	margin-left: 40%;
-	margin-right: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-style: groove;
+	justify-content: center;
+	align-items: center;
 }
 
 
+/* These below are for the attributes of the H2 header and Body Texts for the Prices & Packages page */
+.h2Price {
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-underline-offset: 20%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	
+	
+}
+
+
+.bodyText {
+	padding-top: 1%;
+	padding-bottom: 3%;
+	font-style: normal;
+	font-size: 200%;
+	font-family: 'Architects Daughter', cursive;
+	
+	
+}
+
+
+.bodyTextList {
+	font-family: 'Gaegu', sans-serif;
+	font-style: normal;
+	font-size: 150%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+}
 
 
 /* These below are for the attributes of the video background, video control button & music control button */
@@ -146,6 +184,22 @@
 
 
 
+/* These below are for the attributes of the footer on the Prices & Packages page*/
+.footerPrice{
+	position: relative;
+	margin-top: 6%;
+    background-color: #f775a9;
+	color: white;
+    height: auto;
+    width: 100%;
+	z-index: 0;
+	bottom: 0;
+	padding: 2%;
+	text-align: center;
+}
+
+
+
 /* These below are for the attributes of the Snake minigame */
 .wrapper {
   width: 65vmin;
@@ -219,16 +273,29 @@ section {
 }
 
 
-#syamuPriceButton {
+
+/* These below are for the attributes of the YouTube button on the Prices & Packages page */
+#syamuYoutubeButton {
+	font-family: 'Hachi Maru Pop', cursive;
+	font-weight: bold;
+	letter-spacing: 5px;
+	border-color: #cc86a4;
     background-color: #f775a9;
     color: white;
     padding: 0.5em 1em;
     font-size: 1em;
     cursor: pointer;
-    border: none;
+    border-style: solid;
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	display: flex;
+	
 }
 
-#syamuPriceButton:hover {
+#syamuYoutubeButton:hover {
     background-color: #d3618d;
 }
 
@@ -237,8 +304,13 @@ section {
     width: 100%;
     max-width: 600px;
     margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 .hidden {
     display: none;
 }
+
+
